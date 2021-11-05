@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="icon" type="image/gif/png" href="logo.png">
+    <title>Auau Social</title>
+  </head>
+
+  <body style="background-color: #3DD49F;">
+
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="logo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Principal</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Quem Somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Depoimentos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contato</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container" style="margin-top: 5%;">
+      <div class="row">
+        <div class="col-6">
+          <h1>Bem vindo a rede social dos cachorrinhos, cadastre o seu dog e crie novos laços!! </h1>
+          <img src="https://www.bichoprabicho.com.br/wp-content/uploads/2019/09/creche-caes-1024x329.png" class="img-fluid" alt="">
+
+        </div>
+        <div class="col-6">
+          <h1>Login</h1>
+          <form action="entrar.php" method="post">
+            <div class="mb-3">
+              <label for="usuario_acesso" class="form-label">AuUsuário</label>
+              <input type="text" class="form-control" id="usuario_acesso">
+            </div>
+            <div class="mb-3">
+              <label for="senha_acesso" class="form-label">AuSenha</label>
+              <input type="password" class="form-control" id="senha_acesso">
+            </div>
+            <button type="submit" class="btn btn-light">Entrar</button>
+          </form>
+          <p>Ainda não é Cadastrado? <a href="#" data-bs-toggle="modal" data-bs-target="#cadastrar_usuario">Clique aqui!</a></p>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="cadastrar_usuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content" style="background-color: #3DD49F;">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Registrar Cachorro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form action="cadastrar.php" method="post">
+                  <h6>Responsável</h6>
+                  <div class="mb-3">
+                    <label for="nome_responsavel_cadastro" class="form-label">Nome Responsável </label>
+                    <input type="text" class="form-control" id="nome_responsavel_cadastro">
+                  </div>
+                  <div class="mb-3">
+                    <label for="email_responsavel_cadastro" class="form-label">Email Responsável </label>
+                    <input type="email" class="form-control" id="email_responsavel_cadastro">
+                  </div>
+                  <h6>Acesso a Rede Social</h6>
+                  <div class="mb-3">
+                    <label for="nome_usuario_cadastro" class="form-label">Nome Usuário </label>
+                    <input type="text" class="form-control" id="nome_usuario_cadastro">
+                  </div>
+                  <div class="mb-3">
+                    <label for="senha_cadastro" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="senha_cadastro">
+                  </div>
+                  <h6>Perfil Cachorro</h6>
+                  <div class="mb-3">
+                    <label for="nome_cachorro_cadastro" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome_cachorro_cadastro">
+                  </div>
+                  <div class="mb-3">
+                    <label for="raca_cachorro_cadastro" class="form-label">Raça</label>
+                    <input type="text" class="form-control" id="raca_cachorro_cadastro">
+                  </div>
+                  <div class="mb-3">
+                    <label for="idade_cachorro_cadastro" class="form-label">Idade</label>
+                    <input type="number" class="form-control" id="idade_cachorro_cadastro">
+                  </div>
+                  <div class="mb-3">
+                    <label for="nascimento_cachorro_cadastro" class="form-label">Nascimento</label>
+                    <input type="date" class="form-control" id="nascimento_cachorro_cadastro">
+                  </div>
+                  <div class="mb-3">
+                    <label for="foto_cachorro_cadastro" class="form-label">Foto</label>
+                    <input type="file" class="form-control" id="foto_cachorro_cadastro">
+                  </div>
+
+                  <button type="submit" class="btn btn-light">Cadastrar</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="bg-light">
+      <p>Desenvolvido por Queila Queiroz - 2021</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <style>
+
+      html {
+        height: 100%;
+        min-height: 100%;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+      }
+
+      h6{
+        color: red;
+      }
+
+      footer{
+        margin-top: auto;
+        text-align: center;
+        padding: 3px;
+      }
+
+    </style>
+  </body>
+</html>
